@@ -10,14 +10,18 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="SFamilies · Construire quelque chose de nouveau, pour un futur qui rend gloire à Dieu.">
 <meta property="og:description" content="Construire quelque chose de nouveau, pour un futur qui rend gloire à Dieu.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23C80700'/%3E%3Cpath d='M50 14L82 26.5V54c0 20.5-13.5 33-32 39-18.5-6-32-18.5-32-39V26.5L50 14z' fill='none' stroke='%23FFFFFF' stroke-width='5'/%3E%3Ccircle cx='50' cy='35' r='6' fill='%23FFFFFF'/%3E%3Cpath d='M25 46L50 60L75 46L75 68L50 82L25 68Z' fill='%23FFFFFF'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+<link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="SFamilies" />
+<link rel="manifest" href="assets/favicon/site.webmanifest" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght@8..144,-10..0,75..125,400..800&display=swap">
 <style>
 :root{
   --red:#C80700; --red-dark:#9E0500; --red-soft:#FDF4F3;
-  --blue:#3367D6; --blue-border:rgba(255,255,255,.28); --blue-soft:#E8F0FE;
   --black:#121316; --black-card:#1A1C21; --black-border:#2C3038; --black-soft:#C7CCD6;
   --white:#FFFFFF; --ink:#191414; --muted:#635858; --soft:#3B3232;
   --line:#EADAD8;
@@ -91,7 +95,7 @@ nav{display:flex;flex-wrap:wrap;gap:10px;font-size:14px}
 .eyebrow{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--red);font-variation-settings:"wght" 650,"wdth" 105}
 h1{font-weight:700;font-size:clamp(2.25rem,6vw,4rem);font-variation-settings:"wght" 780,"wdth" 96,"opsz" 64;line-height:1.05;margin:16px 0 24px;max-width:880px;color:var(--ink)}
 .lead{font-size:clamp(1.15rem,2.2vw,1.375rem);max-width:720px;margin-bottom:36px;color:var(--soft)}
-.btn{display:inline-flex;align-items:center;min-height:44px;padding:12px 28px;border-radius:8px;font-weight:500;font-variation-settings:"wght" 600;text-decoration:none;transition:background-color .25s var(--ease),color .25s var(--ease),transform .25s var(--ease),border-color .25s var(--ease),box-shadow .25s var(--ease)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:12px 28px;border-radius:8px;font-weight:500;font-variation-settings:"wght" 600;text-decoration:none;transition:background-color .25s var(--ease),color .25s var(--ease),transform .25s var(--ease),border-color .25s var(--ease),box-shadow .25s var(--ease)}
 .btn:hover{transform:translateY(-2px)}
 .btn:active{transform:translateY(0) scale(.98)}
 .btn-primary{background:var(--red);color:var(--white)}
@@ -123,20 +127,17 @@ h2.m32{margin-bottom:32px}
   transform:translateY(-6px) scale(1);
 }
 
-.band-blue{background:var(--blue);color:var(--white);border-top:1px solid #2855B8;border-bottom:1px solid #2855B8}
-.band-blue h2{color:var(--white)}
-.band-blue .props>div{flex:1 1 220px;background:rgba(13,34,82,.24);border:1px solid var(--blue-border);border-radius:12px;padding:24px}
-.band-blue .props>div.is-visible:hover{
-  background:rgba(13,34,82,.38);
-  border-color:rgba(255,255,255,.65);
-  box-shadow:0 14px 28px rgba(13,34,82,.32);
-}
-.band-blue .num{color:var(--blue-soft);font-family:var(--flex);font-weight:700;font-variation-settings:"wght" 750;font-size:13px;letter-spacing:.06em;margin-bottom:8px;transition:transform .3s var(--ease),color .3s var(--ease)}
-.band-blue .props>div:hover .num{transform:translateX(4px);color:#FFFFFF}
-.band-blue .props strong{display:block;font-weight:500;font-variation-settings:"wght" 520;color:var(--white)}
-
 .band-black{background:var(--black);color:var(--white);border-top:1px solid var(--black-border);border-bottom:1px solid var(--black-border)}
 .band-black h2{color:var(--white)}
+.band-black .props>div{flex:1 1 220px;background:var(--black-card);border:1px solid var(--black-border);border-radius:12px;padding:24px}
+.band-black .props>div.is-visible:hover{
+  background:#20232A;
+  border-color:var(--red);
+  box-shadow:0 14px 28px rgba(0,0,0,.45);
+}
+.band-black .num{color:#FF6B66;font-family:var(--flex);font-weight:700;font-variation-settings:"wght" 750;font-size:13px;letter-spacing:.06em;margin-bottom:8px;transition:transform .3s var(--ease)}
+.band-black .props>div:hover .num{transform:translateX(4px)}
+.band-black .props strong{display:block;font-weight:500;font-variation-settings:"wght" 520;color:var(--black-soft)}
 .band-black .card{flex:1 1 240px;border:1px solid var(--black-border);border-radius:12px;padding:28px;background:var(--black-card)}
 .band-black .card.is-visible:hover{
   background:#20232A;
@@ -149,6 +150,61 @@ h2.m32{margin-bottom:32px}
 .band-black .card p{color:var(--black-soft)}
 .band-black .text{color:var(--black-soft)}
 .band-black .text strong{color:var(--white)}
+
+.prog-card{
+  flex:1 1 380px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  background:var(--red-soft);
+}
+.prog-card.is-visible:hover{
+  border-color:var(--red);
+  box-shadow:0 16px 34px rgba(200,7,0,.11);
+}
+.prog-media{
+  aspect-ratio:16/10;
+  overflow:hidden;
+  background:var(--red);
+  border-bottom:1px solid var(--line);
+}
+.prog-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .5s var(--ease);
+}
+.prog-card:hover .prog-media img{
+  transform:scale(1.03);
+}
+.prog-body{
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+.prog-schedule{
+  font-size:14px;
+  color:var(--red);
+  font-variation-settings:"wght" 700;
+  margin-bottom:12px;
+}
+.prog-list{
+  margin:14px 0 24px;
+  padding-left:18px;
+  color:var(--soft);
+}
+.prog-list li+li{
+  margin-top:6px;
+}
+.prog-actions{
+  margin-top:auto;
+  padding-top:8px;
+}
 
 .card{flex:1 1 240px;border:1px solid var(--line);border-radius:12px;padding:28px;background:var(--white)}
 .card.is-visible:hover{
@@ -180,7 +236,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-con
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .anim-card,.anim-card.is-visible,.anim-card.is-visible:hover,.btn,.nav-btn,.emblem,.campus,.card .tag,.band-blue .num{
+  .anim-card,.anim-card.is-visible,.anim-card.is-visible:hover,.btn,.nav-btn,.emblem,.campus,.card .tag,.band-black .num,.prog-media img{
     opacity:1;transform:none;transition:none;
   }
 }
@@ -218,6 +274,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-con
       <a class="nav-btn" href="#charte">Charte &amp; Identité</a>
       <a class="nav-btn" href="#projets">Projets en cours</a>
       <a class="nav-btn" href="#parcours">Parcours</a>
+      <a class="nav-btn" href="#programmes">Nos Programmes</a>
       <a class="nav-btn nav-btn--cta" href="#contact">Contact</a>
     </nav>
   </div>
@@ -229,12 +286,12 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-con
     <h1>Construire quelque chose de nouveau, pour un futur qui rend gloire à Dieu.</h1>
     <p class="lead">Sous la protection du bouclier de nos valeurs, nous unissons l'humain, l'étudiant et la communauté pour grandir dans le savoir et bâtir un avenir commun.</p>
     <div class="row" style="gap:16px">
-      <a class="btn btn-primary" href="#projets">Découvrir nos projets</a>
-      <a class="btn btn-ghost" href="#charte">Notre charte graphique</a>
+      <a class="btn btn-primary" href="#programmes">Nos Programmes</a>
+      <a class="btn btn-ghost" href="#projets">Découvrir nos projets</a>
     </div>
   </div>
 
-  <div class="band-blue">
+  <div class="band-black">
     <div class="wrap tight" style="padding-top:72px;padding-bottom:72px">
       <h2 class="m32">Ce que symbolise notre emblème</h2>
       <div class="row props">
@@ -326,6 +383,49 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-con
     </div>
   </section>
 
+  <section id="programmes" class="tight" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="m32">Nos Programmes</h2>
+      <div class="row">
+        <article class="prog-card anim-card">
+          <div class="prog-media">
+            <img src="assets/sfamilies-bible-study-meet.jpeg" alt="Visuel du programme SFamilies Bible study chaque mercredi de 20h00 à 22h00" loading="lazy">
+          </div>
+          <div class="prog-body">
+            <div class="prog-schedule">Chaque Mercredi · 20h00 - 22h00</div>
+            <h3>SFamilies Bible study</h3>
+            <ul class="prog-list">
+              <li>Bible Study</li>
+              <li>QnA Session</li>
+              <li>Daily Life Discussion</li>
+            </ul>
+            <div class="prog-actions">
+              <a class="btn btn-primary" href="https://meet.google.com/uop-fqoy-kfa" target="_blank" rel="noopener noreferrer">Rejoindre sur Google Meet</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="prog-card anim-card">
+          <div class="prog-media">
+            <img src="assets/sfamilies-research-meet.jpeg" alt="Visuel du programme SFamilies Research chaque samedi de 10h30 à 12h30" loading="lazy">
+          </div>
+          <div class="prog-body">
+            <div class="prog-schedule">Chaque Samedi · 10h30 - 12h30</div>
+            <h3>SFamilies Research</h3>
+            <ul class="prog-list">
+              <li>Tech News</li>
+              <li>QnA Session</li>
+              <li>GNet Development</li>
+            </ul>
+            <div class="prog-actions">
+              <a class="btn btn-primary" href="https://meet.google.com/rjo-bydo-yqz" target="_blank" rel="noopener noreferrer">Rejoindre sur Google Meet</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <div class="belief">
     <div class="wrap" style="padding-top:96px;padding-bottom:96px">
       <p>Construire quelque chose de nouveau, pour un futur qui rend gloire à Dieu.</p>
@@ -342,10 +442,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-con
       </div>
       <div>
         <h2>Contributeurs</h2>
-        <p class="strong">NathanBangwa</p>
-        <p class="muted">Architecte de solutions · Master en Data Science · @nathanbangwa243</p>
+        <p class="strong">Nathan Bangwa</p>
+        <p class="muted">Community Advocate · Auteur du manifeste</p>
         <p class="strong mt-16">Franck Kimpinde</p>
-        <p class="muted">Master en Communication Numérique · Co-auteur du Manifeste UDBL</p>
+        <p class="muted">Master en Communication Numérique · Co-auteur du Manifeste</p>
       </div>
     </div>
   </section>
