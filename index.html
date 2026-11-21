@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SFamilies · Construire quelque chose de nouveau, pour un futur qui rend gloire à Dieu.</title>
+<meta name="description" content="Construire quelque chose de nouveau, pour un futur qui rend gloire à Dieu. Présentation de SFamilies (Student Family : UDBL, UNILU, UPL, UNH) sur GitHub Pages.">
+<meta name="theme-color" content="#C80700">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="SFamilies · Construire quelque chose de nouveau, pour un futur qui rend gloire à Dieu.">
+<meta property="og:description" content="Construire quelque chose de nouveau, pour un futur qui rend gloire à Dieu.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23C80700'/%3E%3Cpath d='M50 14L82 26.5V54c0 20.5-13.5 33-32 39-18.5-6-32-18.5-32-39V26.5L50 14z' fill='none' stroke='%23FFFFFF' stroke-width='5'/%3E%3Ccircle cx='50' cy='35' r='6' fill='%23FFFFFF'/%3E%3Cpath d='M25 46L50 60L75 46L75 68L50 82L25 68Z' fill='%23FFFFFF'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght@8..144,-10..0,75..125,400..800&display=swap">
+<style>
+:root{
+  --red:#C80700; --red-dark:#9E0500; --red-soft:#FDF4F3;
+  --blue:#0F294A; --blue-border:#234A7A; --blue-soft:#D8E6F8;
+  --black:#121316; --black-card:#1A1C21; --black-border:#2C3038; --black-soft:#C7CCD6;
+  --white:#FFFFFF; --ink:#191414; --muted:#635858; --soft:#3B3232;
+  --line:#EADAD8;
+  --flex:'Roboto Flex',system-ui,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--flex);font-size:17px;font-variation-settings:"wght" 420,"wdth" 100,"opsz" 17;line-height:1.6;-webkit-text-size-adjust:100%}
+a{color:var(--red)}
+a:hover{color:var(--ink)}
+a:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--flex);margin:0}
+p{margin:0}
+.skip{position:absolute;left:-999px;top:8px;background:var(--red);color:var(--white);padding:8px 14px;border-radius:6px;z-index:10}
+.skip:focus{left:8px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+.row{display:flex;flex-wrap:wrap;gap:24px}
+.cols{display:flex;flex-wrap:wrap;gap:48px}
+.cols>div{flex:1 1 360px}
+
+header{background:var(--white);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding-top:24px;padding-bottom:24px}
+.brand{display:inline-flex;align-items:center;gap:12px;font-family:var(--flex);font-weight:700;font-variation-settings:"wght" 750,"wdth" 105;font-size:20px;color:var(--red)}
+.emblem{width:36px;height:40px;flex:0 0 auto;transition:transform .35s var(--ease)}
+.brand:hover .emblem{transform:scale(1.06) rotate(-2deg)}
+
+nav{display:flex;flex-wrap:wrap;gap:10px;font-size:14px}
+.nav-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:38px;
+  padding:8px 16px;
+  border-radius:8px;
+  border:1.5px solid var(--line);
+  background:var(--red-soft);
+  color:var(--ink);
+  text-decoration:none;
+  font-variation-settings:"wght" 600,"wdth" 100;
+  transition:
+    transform .25s var(--ease),
+    background-color .25s var(--ease),
+    border-color .25s var(--ease),
+    color .25s var(--ease),
+    box-shadow .25s var(--ease);
+}
+.nav-btn:hover{
+  transform:translateY(-2px);
+  background:var(--red);
+  border-color:var(--red);
+  color:var(--white);
+  box-shadow:0 8px 18px rgba(200,7,0,.18);
+}
+.nav-btn:active{
+  transform:translateY(0) scale(.97);
+}
+.nav-btn--cta{
+  background:var(--red);
+  border-color:var(--red);
+  color:var(--white);
+}
+.nav-btn--cta:hover{
+  background:var(--red-dark);
+  border-color:var(--red-dark);
+  color:var(--white);
+  box-shadow:0 8px 18px rgba(158,5,0,.24);
+}
+
+.hero{padding-top:96px;padding-bottom:88px}
+.eyebrow{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--red);font-variation-settings:"wght" 650,"wdth" 105}
+h1{font-weight:700;font-size:clamp(2.25rem,6vw,4rem);font-variation-settings:"wght" 780,"wdth" 96,"opsz" 64;line-height:1.05;margin:16px 0 24px;max-width:880px;color:var(--ink)}
+.lead{font-size:clamp(1.15rem,2.2vw,1.375rem);max-width:720px;margin-bottom:36px;color:var(--soft)}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:12px 28px;border-radius:8px;font-weight:500;font-variation-settings:"wght" 600;text-decoration:none;transition:background-color .25s var(--ease),color .25s var(--ease),transform .25s var(--ease),border-color .25s var(--ease),box-shadow .25s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-primary{background:var(--red);color:var(--white)}
+.btn-primary:hover{background:var(--red-dark);color:var(--white);box-shadow:0 10px 22px rgba(200,7,0,.2)}
+.btn-ghost{border:1.5px solid var(--red);color:var(--red);background:var(--white)}
+.btn-ghost:hover{background:var(--red);color:var(--white);box-shadow:0 10px 22px rgba(200,7,0,.15)}
+
+section{padding:88px 0}
+section.tight{padding:72px 0}
+h2{font-weight:700;font-size:clamp(1.5rem,3vw,2rem);font-variation-settings:"wght" 720,"wdth" 100;margin-bottom:16px}
+h2.m32{margin-bottom:32px}
+
+.anim-card{
+  opacity:0;
+  transform:translateY(22px) scale(.985);
+  transition:
+    opacity .6s var(--ease) var(--delay,0ms),
+    transform .6s var(--ease) var(--delay,0ms),
+    box-shadow .3s var(--ease),
+    border-color .3s var(--ease),
+    background-color .3s var(--ease);
+  will-change:transform,opacity;
+}
+.anim-card.is-visible{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+.anim-card.is-visible:hover{
+  transform:translateY(-6px) scale(1);
+}
+
+.band-blue{background:var(--blue);color:var(--white);border-top:1px solid var(--blue-border);border-bottom:1px solid var(--blue-border)}
+.band-blue h2{color:var(--white)}
+.band-blue .props>div{flex:1 1 220px;background:rgba(255,255,255,.04);border:1px solid var(--blue-border);border-radius:12px;padding:24px}
+.band-blue .props>div.is-visible:hover{
+  background:rgba(255,255,255,.08);
+  border-color:#5688C7;
+  box-shadow:0 14px 28px rgba(4,12,24,.38);
+}
+.band-blue .num{color:var(--blue-soft);font-family:var(--flex);font-weight:700;font-variation-settings:"wght" 750;font-size:13px;letter-spacing:.06em;margin-bottom:8px;transition:transform .3s var(--ease),color .3s var(--ease)}
+.band-blue .props>div:hover .num{transform:translateX(4px);color:#FFFFFF}
+.band-blue .props strong{display:block;font-weight:500;font-variation-settings:"wght" 520;color:var(--white)}
+
+.band-black{background:var(--black);color:var(--white);border-top:1px solid var(--black-border);border-bottom:1px solid var(--black-border)}
+.band-black h2{color:var(--white)}
+.band-black .card{flex:1 1 240px;border:1px solid var(--black-border);border-radius:12px;padding:28px;background:var(--black-card)}
+.band-black .card.is-visible:hover{
+  background:#20232A;
+  border-color:var(--red);
+  box-shadow:0 16px 32px rgba(0,0,0,.45);
+}
+.band-black .card .tag{display:inline-block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#FF6B66;font-variation-settings:"wght" 650,"wdth" 105;margin-bottom:10px;transition:transform .3s var(--ease)}
+.band-black .card:hover .tag{transform:translateX(4px)}
+.band-black .card h3{font-size:22px;font-variation-settings:"wght" 700;margin-bottom:8px;color:var(--white)}
+.band-black .card p{color:var(--black-soft)}
+.band-black .text{color:var(--black-soft)}
+.band-black .text strong{color:var(--white)}
+
+.card{flex:1 1 240px;border:1px solid var(--line);border-radius:12px;padding:28px;background:var(--white)}
+.card.is-visible:hover{
+  border-color:var(--red);
+  box-shadow:0 14px 28px rgba(200,7,0,.08);
+}
+.card .tag{display:inline-block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--red);font-variation-settings:"wght" 650,"wdth" 105;margin-bottom:10px;transition:transform .3s var(--ease)}
+.card:hover .tag{transform:translateX(4px)}
+.card h3{font-size:22px;font-variation-settings:"wght" 700;margin-bottom:8px}
+.card p{color:var(--soft)}
+
+.text{color:var(--soft);max-width:760px}
+.text+.text{margin-top:16px}
+
+.campuses{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.campus{border:1px solid var(--line);background:var(--red-soft);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--soft);transition:transform .25s var(--ease),border-color .25s var(--ease)}
+.campus:hover{transform:translateY(-2px);border-color:var(--red)}
+.campus strong{color:var(--red);font-variation-settings:"wght" 650}
+
+.belief{background:var(--red);color:var(--white)}
+.belief p{font-family:var(--flex);font-weight:500;font-size:clamp(1.5rem,3.6vw,2.25rem);font-variation-settings:"wght" 550,"wdth" 98;line-height:1.25;max-width:840px}
+
+.muted{color:var(--muted)}
+.strong{font-weight:500;font-variation-settings:"wght" 600}
+.mt-16{margin-top:16px}
+.mt-24{margin-top:24px}
+footer{border-top:1px solid var(--line);background:var(--white);font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding-top:28px;padding-bottom:28px}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .anim-card,.anim-card.is-visible,.anim-card.is-visible:hover,.btn,.nav-btn,.emblem,.campus,.card .tag,.band-blue .num{
+    opacity:1;transform:none;transition:none;
+  }
+}
+
+@media (max-width:640px){
+  .wrap{padding:0 20px}
+  .hero{padding-top:56px;padding-bottom:56px}
+  section{padding:56px 0}
+  section.tight{padding:48px 0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <svg class="emblem" viewBox="0 0 100 112" aria-hidden="true">
+        <path d="M50 4L94 21.5V56c0 27.5-18.5 44.5-44 52C24.5 100.5 6 83.5 6 56V21.5L50 4z" fill="#C80700"/>
+        <path d="M50 9.5L88.5 25V55.5c0 24.5-16.2 39.8-38.5 46.8C27.7 95.3 11.5 80 11.5 55.5V25L50 9.5z" fill="none" stroke="#FFFFFF" stroke-width="3.2"/>
+        <circle cx="50" cy="34" r="6.5" fill="#FFFFFF"/>
+        <path d="M18 46c8 8 16 14 27 18v24c-11-5-19-12-27-22V46z" fill="#FFFFFF"/>
+        <path d="M82 46c-8 8-16 14-27 18v24c11-5 19-12 27-22V46z" fill="#FFFFFF"/>
+        <path d="M23 39c4 7 9 12 16 15l-4 6c-7-4-12-9-16-16l4-5z" fill="#FFFFFF"/>
+        <path d="M77 39c-4 7-9 12-16 15l4 6c7-4 12-9 16-16l-4-5z" fill="#FFFFFF"/>
+        <circle cx="27" cy="31" r="4.5" fill="#FFFFFF"/>
+        <circle cx="73" cy="31" r="4.5" fill="#FFFFFF"/>
+        <path d="M45 43h10v41l-5 5-5-5V43z" fill="#FFFFFF"/>
+        <path d="M50 86l2.5 5.5 5.5 2.5-5.5 2.5L50 102l-2.5-5.5-5.5-2.5 5.5-2.5L50 86z" fill="#FFFFFF"/>
+      </svg>
+      <span>SFamilies</span>
+    </div>
+    <nav aria-label="Navigation principale">
+      <a class="nav-btn" href="#charte">Charte &amp; Identité</a>
+      <a class="nav-btn" href="#projets">Projets en cours</a>
+      <a class="nav-btn" href="#parcours">Parcours</a>
+      <a class="nav-btn nav-btn--cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+  <div class="wrap hero">
+    <div class="eyebrow">Student Family · Communauté scientifique centrée sur Jésus</div>
+    <h1>Construire quelque chose de nouveau, pour un futur qui rend gloire à Dieu.</h1>
+    <p class="lead">Sous la protection du bouclier de nos valeurs, nous unissons l'humain, l'étudiant et la communauté pour grandir dans le savoir et bâtir un avenir commun.</p>
+    <div class="row" style="gap:16px">
+      <a class="btn btn-primary" href="#projets">Découvrir nos projets</a>
+      <a class="btn btn-ghost" href="#charte">Notre charte graphique</a>
+    </div>
+  </div>
+
+  <div class="band-blue">
+    <div class="wrap tight" style="padding-top:72px;padding-bottom:72px">
+      <h2 class="m32">Ce que symbolise notre emblème</h2>
+      <div class="row props">
+        <div class="anim-card"><div class="num">01 · LE BOUCLIER</div><strong>Incarne la protection, les valeurs et l'identité forte de la famille</strong></div>
+        <div class="anim-card"><div class="num">02 · LA COMMUNAUTÉ</div><strong>Les figures unies symbolisent la solidarité et l'excellence partagée</strong></div>
+        <div class="anim-card"><div class="num">03 · L'HUMAIN &amp; L'ÉTUDIANT</div><strong>Chaque étudiant au cœur du projet, avec le livre ouvert pour grandir ensemble</strong></div>
+        <div class="anim-card"><div class="num">04 · L'UNITÉ</div><strong>L'étoile au bas du bouclier représente une direction commune et un avenir brillant</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="charte">
+    <div class="wrap cols">
+      <div>
+        <h2>Une famille universitaire unie</h2>
+        <p class="text">Née au cœur de l'Université Don Bosco de Lubumbashi et ouverte à la dynamique interuniversitaire, Student Family rassemble des étudiants passionnés de science et attachés à Jésus-Christ.</p>
+        <p class="text">Le livre ouvert au centre traduit notre vision commune et notre engagement à apprendre ensemble et à croître, tandis que chaque étudiant occupe une place centrale au sein de la communauté.</p>
+        <div class="campuses" aria-label="Universités associées">
+          <div class="campus"><strong>UDBL</strong> · Université Don Bosco de Lubumbashi</div>
+          <div class="campus"><strong>UNILU</strong> · Université de Lubumbashi</div>
+          <div class="campus"><strong>UPL</strong> · Université Protestante de Lubumbashi</div>
+          <div class="campus"><strong>UNH</strong> · Université Nouvelle Horizon</div>
+        </div>
+      </div>
+      <div>
+        <h2>Notre approche</h2>
+        <p class="text">Nous refusons la séparation entre la foi, l'intégrité et l'exigence scientifique : chaque compétence développée vise l'utilité concrète, la rigueur et l'élévation collective.</p>
+        <p class="text">L'étoile placée à la base du bouclier rappelle notre cap commun : avancer ensemble vers un avenir brillant, porté par la solidarité, le travail et l'excellence.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="band-black" id="projets">
+    <section>
+      <div class="wrap">
+        <h2 class="m32">Nos projets en cours</h2>
+        <div class="row">
+          <div class="card anim-card">
+            <div class="tag">Connectivité &amp; Solidarité</div>
+            <h3>Generosity Network (G-Net)</h3>
+            <p>Déploiement d'une infrastructure réseau et de maillage solidaire pensée pour faciliter l'accès aux ressources éducatives et spirituelles sur le campus et en RD Congo.</p>
+          </div>
+          <div class="card anim-card">
+            <div class="tag">Développement &amp; Produits</div>
+            <h3>Fabrique de Solutions Locales</h3>
+            <p>Conception d'applications et de composants logiciels adaptés aux réalités locales, à des conditions de connectivité variées et aux besoins des organisations.</p>
+          </div>
+          <div class="card anim-card">
+            <div class="tag">Sécurité &amp; Résilience</div>
+            <h3>Junior CyberSec &amp; Espace SysAdmin</h3>
+            <p>Montée en compétences pratique sur les infrastructures, les systèmes, l'audit de sécurité, les simulations et la culture des clubs techniques.</p>
+          </div>
+          <div class="card anim-card">
+            <div class="tag">Données, IA &amp; Médias</div>
+            <h3>Observatoire des Données &amp; PodCast</h3>
+            <p>Exploration de modèles et d'analyses appliquées aux réalités régionales, accompagnée d'un podcast stratégique pour valoriser les talents, la recherche et l'innovation.</p>
+          </div>
+        </div>
+        <p class="text mt-24">Temps forts de la communauté : <strong>Innovation Day</strong>, démonstrations de prototypes et programmes d'accompagnement par cohorte.</p>
+      </div>
+    </section>
+  </div>
+
+  <section id="parcours">
+    <div class="wrap">
+      <h2 class="m32">Quatre cycles de progression</h2>
+      <div class="row">
+        <div class="card anim-card">
+          <div class="tag">Cycle 01</div>
+          <h3>Fondations &amp; Rôles</h3>
+          <p>Auto-apprentissage, anglais technique, bases systèmes et réseaux, logique de code, méthodes agiles, documentation et immersion dans son rôle.</p>
+        </div>
+        <div class="card anim-card">
+          <div class="tag">Cycle 02</div>
+          <h3>Architecture &amp; Sécurité</h3>
+          <p>Conception, APIs, workflows collaboratifs, preuves de concept, sécurité offensive et défensive, audits croisés et livraison du MVP.</p>
+        </div>
+        <div class="card anim-card">
+          <div class="tag">Cycle 03</div>
+          <h3>IA &amp; Systèmes Embarqués</h3>
+          <p>Fondations IA, agents et automatisation, électronique, matériel, IoT et fusion logiciel-matériel jusqu'aux démonstrations de projets.</p>
+        </div>
+        <div class="card anim-card">
+          <div class="tag">Cycle 04</div>
+          <h3>Recherche &amp; Publication</h3>
+          <p>Mathématiques et calcul quantique, état de l'art, expérimentation rigoureuse, revue technique et rédaction d'articles scientifiques.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="belief">
+    <div class="wrap" style="padding-top:96px;padding-bottom:96px">
+      <p>Construire quelque chose de nouveau, pour un futur qui rend gloire à Dieu.</p>
+    </div>
+  </div>
+
+  <section id="contact">
+    <div class="wrap cols">
+      <div>
+        <h2>Rejoindre la dynamique</h2>
+        <p class="text">Étudiants, développeurs, chercheurs, mentors et partenaires qui souhaitent bâtir ensemble sont les bienvenus.</p>
+        <p class="strong mt-16"><a href="mailto:nathanbangwa243@gmail.com">nathanbangwa243@gmail.com</a></p>
+        <p class="muted">Lubumbashi, RD Congo</p>
+      </div>
+      <div>
+        <h2>Contributeurs</h2>
+        <p class="strong">NathanBangwa</p>
+        <p class="muted">Architecte de solutions · Master en Data Science · @nathanbangwa243</p>
+        <p class="strong mt-16">Franck Kimpinde</p>
+        <p class="muted">Master en Communication Numérique · Co-auteur du Manifeste UDBL</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 SFamilies · Construire quelque chose de nouveau, pour un futur qui rend gloire à Dieu.</span>
+    <span>UDBL · UNILU · UPL · UNH</span>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const cards = document.querySelectorAll('.anim-card');
+  if (!cards.length) return;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    cards.forEach((card) => card.classList.add('is-visible'));
+    return;
+  }
+
+  cards.forEach((card) => {
+    const siblings = Array.from(card.parentElement.children).filter((el) => el.classList.contains('anim-card'));
+    const index = Math.max(0, siblings.indexOf(card));
+    card.style.setProperty('--delay', `${index * 90}ms`);
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.14, rootMargin: '0px 0px -30px 0px' }
+  );
+
+  cards.forEach((card) => observer.observe(card));
+})();
+</script>
+</body>
+</html>
