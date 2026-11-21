@@ -17,7 +17,7 @@
 <style>
 :root{
   --red:#C80700; --red-dark:#9E0500; --red-soft:#FDF4F3;
-  --blue:#0F294A; --blue-border:#234A7A; --blue-soft:#D8E6F8;
+  --blue:#3367D6; --blue-border:rgba(255,255,255,.28); --blue-soft:#E8F0FE;
   --black:#121316; --black-card:#1A1C21; --black-border:#2C3038; --black-soft:#C7CCD6;
   --white:#FFFFFF; --ink:#191414; --muted:#635858; --soft:#3B3232;
   --line:#EADAD8;
@@ -123,13 +123,13 @@ h2.m32{margin-bottom:32px}
   transform:translateY(-6px) scale(1);
 }
 
-.band-blue{background:var(--blue);color:var(--white);border-top:1px solid var(--blue-border);border-bottom:1px solid var(--blue-border)}
+.band-blue{background:var(--blue);color:var(--white);border-top:1px solid #2855B8;border-bottom:1px solid #2855B8}
 .band-blue h2{color:var(--white)}
-.band-blue .props>div{flex:1 1 220px;background:rgba(255,255,255,.04);border:1px solid var(--blue-border);border-radius:12px;padding:24px}
+.band-blue .props>div{flex:1 1 220px;background:rgba(13,34,82,.24);border:1px solid var(--blue-border);border-radius:12px;padding:24px}
 .band-blue .props>div.is-visible:hover{
-  background:rgba(255,255,255,.08);
-  border-color:#5688C7;
-  box-shadow:0 14px 28px rgba(4,12,24,.38);
+  background:rgba(13,34,82,.38);
+  border-color:rgba(255,255,255,.65);
+  box-shadow:0 14px 28px rgba(13,34,82,.32);
 }
 .band-blue .num{color:var(--blue-soft);font-family:var(--flex);font-weight:700;font-variation-settings:"wght" 750;font-size:13px;letter-spacing:.06em;margin-bottom:8px;transition:transform .3s var(--ease),color .3s var(--ease)}
 .band-blue .props>div:hover .num{transform:translateX(4px);color:#FFFFFF}
